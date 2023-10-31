@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/solarisexamination/css/style.css" />
+  </head>
+  <body>
+    <div class="solsystemetLogo">
+      <h1>SOLSYSTEMET</h1>
+      <span>Solaris</span>
+    </div>
+    <div class="planets">
+      <div class="sun"></div>
+      <div class="mercury"></div>
+      <div class="venus"></div>
+      <div class="earth"></div>
+      <div class="mars"></div>
+      <div class="jupiter"></div>
+      <div class="saturn"><section class="ellipse10"></section></div>
+      <div class="uranus"></div>
+      <div class="neptunus"></div>
+    </div>
+    <div id="planetModal" class="modal">
+      <div class="star-container"></div>
+      <div class="blueSun"></div>
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="planetName"></h2>
+        <h3 id="planetLatinName"></h3>
+        <p id="planetDescription"></p>
+        <p id="planetCirc"></p>
+        <p id="planetDistance"></p>
+        <p id="planetDayTemp"></p>
+        <p id="planetNightTemp"></p>
+        <p id="planetMoons"></p>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

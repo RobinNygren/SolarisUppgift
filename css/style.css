@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Montserrat&family=Pixelify+Sans&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Pixelify+Sans&family=Secular+One&display=swap');
+@media (max-width: 1250px) {
+  }
+  
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+
+
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, #0C164D 0%, #190B22 100%);
+    overflow-y: hidden;
+}
+
+.solsystemetLogo{
+    color:#fff;
+    font-family: 'Secular One', sans-serif;
+    letter-spacing: 0.3375rem;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    margin: 1rem;
+    
+}
+
+.solsystemetLogo span{
+    font-family: 'Lora', serif;
+    align-self: flex-end;
+    font-size: 2rem;
+    color: #FFD029;
+}
+
+.planets
+
+{
+margin-right: 3rem;
+width: 100vw;
+justify-content: space-between;
+align-items: center;
+display: flex;
+flex-wrap: wrap;
+
+}
+
+
+.mercury
+{
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+
+    
+    background: #888888;
+}
+
+
+.venus
+{
+
+    border-radius: 50%;
+    width:  2rem;
+    height: 2rem;
+
+    
+    background: #E7CDCD;
+}
+
+
+.earth
+
+{
+border-radius: 50%;
+width: 1.9rem;
+height: 1.9rem;
+
+
+background: #428ED5;}
+
+
+.mars
+
+{
+border-radius: 50%;
+width: 1rem;
+height: 1rem;
+
+
+background: #EF5F5F;}
+
+
+.jupiter
+
+{
+border-radius: 50%;
+width: 12rem;
+height: 12rem;
+
+
+background: #E29468;
+}
+
+
+.saturn
+
+{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+    background: #C7AA72;}
+
+
+.ellipse10
+
+{
+    position: absolute;
+    width: 218.23px;
+    height: 5.5px;
+    border-radius: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    transform: rotate(-30deg);}
+
+
+.uranus
+
+{
+    position: relative;
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    background: #C9D4F1;
+}
+
+
+.neptunus
+
+{
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    background: #7A91A7;}
+
+.sun 
+
+{
+    height: 35rem;
+    width: 35rem;
+    background-color:yellow;
+    border-radius: 100%;
+    margin-left: -24rem;
+    box-shadow: 0px 0px 250px rgba(255, 208, 41, 0.2);
+}
+
+.modal {
+    display: none;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #0C164D 0%, #190B22 100%);
+    
+  }
+  
+.modal-content {
+    color: #fff;
+    width: 40vw;
+    height: 60vh;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    overflow-x: scroll;
+    overflow-x: hidden;
+    padding: 1rem;
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .star {
+    position: absolute;
+    background: #fff;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    filter: blur(2px);
+}
+.blueSun 
+
+{
+    height: 35rem;
+    width: 35rem;
+    position: absolute;
+    background-color:rgba(66, 142, 212, 1);
+    border-radius: 100%;
+    left: -24rem;
+    box-shadow: 0px 0px 250px rgba(255, 208, 41, 0.2);
+}
+  
