@@ -27,14 +27,14 @@ fetchData();
 // Funktion för att öppna modalen och fylla den med planetinformation
 function openModal(planet) {
   const planetModal = document.getElementById('planetModal');
-  document.getElementById('planetName').textContent = `Namn: ${planet.name}`;
-  document.getElementById('planetLatinName').textContent = `Latin Name: ${planet.latinName}`;
-  document.getElementById('planetDescription').textContent = `Beskrivning: ${planet.desc}`;
-  document.getElementById('planetCirc').textContent = `Omkrets: ${planet.circumference} km`;
-  document.getElementById('planetDistance').textContent = `Avstånd från solen: ${planet.distance} km`;
-  document.getElementById('planetDayTemp').textContent = `Daglig genomsnittstemperatur: ${planet.temp.day} C`;
-  document.getElementById('planetNightTemp').textContent = `Nattlig genomsnittstemperatur: ${planet.temp.night} C`;
-  document.getElementById('planetMoons').textContent = `Månar: ${planet.moons.join(", ")}`;
+  document.getElementById('planetName').textContent = `${planet.name}`;
+  document.getElementById('planetLatinName').textContent = `${planet.latinName}`;
+  document.getElementById('planetDescription').textContent = `${planet.desc}`;
+  document.getElementById('planetCirc').textContent = `${planet.circumference} km`;
+  document.getElementById('planetDistance').textContent = `${planet.distance} km`;
+  document.getElementById('planetDayTemp').textContent = `${planet.temp.day} C`;
+  document.getElementById('planetNightTemp').textContent = `${planet.temp.night} C`;
+  document.getElementById('planetMoons').textContent = `${planet.moons.join(", ")}`;
   
   // Visa modalen genom att ändra dess display-egenskap
   planetModal.style.display = 'block';

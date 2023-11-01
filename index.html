@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/solarisexamination/css/style.css" />
   </head>
   <body>
     <div class="solsystemetLogo">
@@ -30,13 +30,27 @@
         <h2 id="planetName"></h2>
         <h3 id="planetLatinName"></h3>
         <p id="planetDescription"></p>
-        <ul id="planetInfo">
-          <li id="planetCirc"></li>
-          <li id="planetDistance"></li>
-          <li id="planetDayTemp"></li>
-          <li id="planetNightTemp"></li>
-          <li id="planetMoons"></li>
-      </ul>
+        <p id="planetInfo"></p>
+        <article class="circ">
+          <h3>omkrets</h3>
+          <p id="planetCirc"></p>
+        </article>
+        <article class="distance">
+          <h3>km från solen</h3>
+          <p id="planetDistance"></p>
+        </article>
+        <article class="dayTemp">
+          <h3>Max temperatur</h3>
+          <p id="planetDayTemp"></p>
+        </article>
+        <article class="nightTemp">
+          <h3>Min temperatur</h3>
+          <p id="planetNightTemp"></p>
+        </article>
+        <article class="moons">
+          <h3>Månar</h3>
+          <p id="planetMoons"></p>
+        </article>
       </div>
     </div>
     <script src="main.js"></script>
