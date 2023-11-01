@@ -14,8 +14,6 @@
 
 
 body{
-
-
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -28,15 +26,19 @@ body{
 .solsystemetLogo{
     color:#fff;
     font-family: 'Secular One', sans-serif;
-    letter-spacing: 0.3375rem;
-    font-size: 1.5rem;
     display: flex;
     flex-direction: column;
     position: absolute;
     top: 0rem;
     right: 0rem;
     margin: 1rem;
-    
+    text-align: right;
+    letter-spacing: 0.3375rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 3.75rem;
 }
 
 .solsystemetLogo span{
@@ -44,104 +46,86 @@ body{
     align-self: flex-end;
     font-size: 2rem;
     color: #FFD029;
+    text-align: right;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem;
+    letter-spacing: 0.9rem;
+    margin-top: 1rem;
+
 }
 
-.planets
-
-{
+.planets{
 margin-right: 3rem;
 width: 100vw;
 justify-content: space-between;
 align-items: center;
 display: flex;
 flex-wrap: wrap;
-
 }
 
 
-.mercury
-{
+.mercury{
     border-radius: 50%;
     width: 1rem;
     height: 1rem;
-
-    
     background: #888888;
 }
 
 
-.venus
-{
+.venus{
 
     border-radius: 50%;
     width:  2rem;
     height: 2rem;
-
-    
     background: #E7CDCD;
 }
 
 
-.earth
-
-{
+.earth{
 border-radius: 50%;
 width: 1.9rem;
 height: 1.9rem;
+background: #428ED5;
+}
 
 
-background: #428ED5;}
-
-
-.mars
-
-{
+.mars{
 border-radius: 50%;
 width: 1rem;
 height: 1rem;
+background: #EF5F5F;
+}
 
 
-background: #EF5F5F;}
-
-
-.jupiter
-
-{
+.jupiter{
 border-radius: 50%;
 width: 12rem;
 height: 12rem;
-
-
 background: #E29468;
 }
 
 
-.saturn
-
-{
+.saturn{
     display:flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
     width: 10rem;
     height: 10rem;
-    background: #C7AA72;}
-
-
-.ellipse10
-
-{
+    background: #C7AA72;
+}
+.saturnRing{
     position: absolute;
     width: 218.23px;
     height: 5.5px;
     border-radius: 100%;
     background: rgba(255, 255, 255, 0.4);
-    transform: rotate(-30deg);}
+    transform: rotate(-30deg);
+}
 
 
-.uranus
-
-{
+.uranus{
     position: relative;
     border-radius: 50%;
     width: 5rem;
@@ -150,26 +134,23 @@ background: #E29468;
 }
 
 
-.neptunus
-
-{
+.neptunus{
     border-radius: 50%;
     width: 5rem;
     height: 5rem;
-    background: #7A91A7;}
+    background: #7A91A7;
+}
 
-.sun 
-
-{
-    height: 35rem;
-    width: 35rem;
+.sun {
+    height: 55rem;
+    width: 31.5rem;
     background-color:yellow;
     border-radius: 100%;
     margin-left: -24rem;
-    box-shadow: 0px 0px 250px rgba(255, 208, 41, 0.2);
+    box-shadow: 0px 0px 250px rgba(255, 208, 41, 0.20);
 }
 
-.modal {
+.modal{
     display: none;
     position: absolute;
     justify-content: center;
@@ -177,10 +158,9 @@ background: #E29468;
     width: 100vw;
     height: 100vh;
     background: linear-gradient(90deg, #0C164D 0%, #190B22 100%);
-    
   }
   
-.modal-content {
+.modal-content{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(5, 1fr);
@@ -188,12 +168,12 @@ background: #E29468;
     width: 40vw;
     height: 60vh;
     position: absolute;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.01);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
+    /* backdrop-filter: blur(5px); */
     -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     overflow-x: scroll;
     overflow-x: hidden;
     padding: 1rem;
@@ -203,7 +183,7 @@ background: #E29468;
     padding: 1rem;
   }
   
-  .close {
+  .close{
     position: absolute;
     top: 10px;
     right: 10px;
@@ -211,7 +191,7 @@ background: #E29468;
     cursor: pointer;
   }
 
-.star {
+.star{
     position: absolute;
     background: #fff;
     width: 2px;
@@ -221,13 +201,14 @@ background: #E29468;
 }
 
 .blueSun{
-    height: 35rem;
-    width: 35rem;
+    height: 55rem;
+    width: 31.5rem;
     position: absolute;
     background-color:rgba(66, 142, 212, 1);
     border-radius: 100%;
     left: -24rem;
-    box-shadow: rgb(66, 142, 212, 1) 0px 0px 50px 0px;
+    box-shadow: rgb(66, 142, 212, 0.10) 0px 0px 0px 100px, 
+    rgb(66, 142, 212, 0.06) 0px 0px 0px 50px;
 }
 
 
@@ -235,20 +216,20 @@ background: #E29468;
     grid-column: 1;
     grid-row: 1;
     font-family: 'Secular One', sans-serif;
-    font-size: 2rem;
+    font-size: 3.75rem;
     text-transform: uppercase;
     letter-spacing: 0.3375rem;
     font-weight: 400;
-
+    line-height: 3.75rem;
 }
 
 #planetLatinName{
     grid-column: 1;
     grid-row: 1;
-    margin-top: 3rem;
+    margin-top: 4rem;
     color: #FFD029;
     font-family: 'Lora', serif;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-style: normal;
     font-weight: 400;
     line-height: 1.5rem;
@@ -260,7 +241,7 @@ background: #E29468;
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row: 2;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.676);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 1.125rem;
     font-style: normal;
@@ -281,13 +262,13 @@ background: #E29468;
 .dayTemp{
     grid-column: 1;
     grid-row: 4;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.676);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .nightTemp{
     grid-column: 2;
     grid-row: 4;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.676);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .moons{
@@ -295,17 +276,21 @@ background: #E29468;
     grid-row: 5;
 }
 
-/* .planetInfo {
-    font-family: 'Roboto Condensed', sans-serif;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    list-style-type: none;
-    padding: 0;
-  }
+h3{
+    font-family: 'Secular One', sans-serif;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.125rem;
+    letter-spacing: 0.10125rem;
+    text-transform: uppercase;
+}
 
-.planetInfo li {
-    padding: 10px;
-    margin-bottom: 5px;
-    
-  }
-   */
+#planetCirc, #planetDistance, #planetDayTemp, #planetNightTemp, #planetMoons{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.9125rem;
+    letter-spacing: 0.18rem;
+}
