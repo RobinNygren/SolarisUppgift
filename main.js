@@ -1,6 +1,8 @@
 const BASE_URL = 'https://majazocom.github.io/Data/solaris.json';
 let data; // Deklarera en global variabel för att lagra datan
 const planetDivs = document.querySelectorAll('.planets div');
+const planetModal = document.getElementById('planetModal');
+const starContainer = document.querySelector(".star-container");
 
 const fetchData = async () => {
   try {
@@ -30,8 +32,8 @@ function openModal(planet) {
   document.getElementById('planetName').textContent = `${planet.name}`;
   document.getElementById('planetLatinName').textContent = `${planet.latinName}`;
   document.getElementById('planetDescription').textContent = `${planet.desc}`;
-  document.getElementById('planetCirc').textContent = `${planet.circumference} km`;
-  document.getElementById('planetDistance').textContent = `${planet.distance} km`;
+  document.getElementById('planetCirc').textContent = `${planet.circumference.toLocaleString('sv-SE')} km`;
+  document.getElementById('planetDistance').textContent = `${planet.distance.toLocaleString('sv-SE')} km`;
   document.getElementById('planetDayTemp').textContent = `${planet.temp.day} C`;
   document.getElementById('planetNightTemp').textContent = `${planet.temp.night} C`;
   document.getElementById('planetMoons').textContent = `${planet.moons.join(", ")}`;
@@ -44,7 +46,6 @@ function openModal(planet) {
 
 // Funktion för att stänga modalen när användaren klickar på "X"
 function closeModal() {
-  const planetModal = document.getElementById('planetModal');
   planetModal.style.display = 'none';
 }
 
@@ -52,9 +53,8 @@ function closeModal() {
 function showPlanetInfo(planet) {
   openModal(planet);
 }
-// Skapa stjärnor funktionen
-const starContainer = document.querySelector(".star-container");
 
+// Skapa stjärnor funktionen
 function createStars() {
     for (let i = 0; i < 58; i++) {
         const star = document.createElement("div");
