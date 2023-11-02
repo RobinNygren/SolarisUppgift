@@ -1,3 +1,4 @@
+/************** consts och globala variabler **************/
 const BASE_URL = 'https://majazocom.github.io/Data/solaris.json';
 let data; // Deklarera en global variabel för att lagra datan
 const planetDivs = document.querySelectorAll('.planets div');  //Hitta och lagra alla <div>-element inuti element med klassen "planets"
@@ -27,11 +28,9 @@ const fetchData = async () => {
 }
 
 fetchData();
-
-// Funktion för att öppna modalen och fylla den med planetinformation
+/******** Denna funktion hanterar öppning och stängning av modalen samt fyller den med planetinformation *****/
 function openModal(planet) {
-  const planetModal = document.getElementById('planetModal');
-
+ 
    // lägger in planetinformation i olika HTML-element i modalen
   document.getElementById('planetName').textContent = `${planet.name}`;
   document.getElementById('planetLatinName').textContent = `${planet.latinName}`;
