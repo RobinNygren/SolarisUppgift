@@ -3,15 +3,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Pixelify+Sans&family=Secular+One&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100&display=swap');
-/* @media (max-width: 1250px) {
-  } */
-  
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 
 body{
     width: 100vw;
@@ -31,7 +28,6 @@ body{
     position: absolute;
     top: 2rem;
     right: 1rem;
-    /* margin: 1rem; */
     text-align: right;
     letter-spacing: 0.3375rem;
     font-size: 1.5rem;
@@ -52,7 +48,6 @@ body{
     line-height: 1.5rem;
     letter-spacing: 0.9rem;
     margin-top: 1rem;
-
 }
 
 .planets{
@@ -73,14 +68,12 @@ body{
     box-shadow: rgb(255, 255, 255) 0px 0px 20px 1px;
 }
 
-
 .mercury{
     border-radius: 50%;
     width: 1rem;
     height: 1rem;
     background: #888888;
 }
-
 
 .venus{
 
@@ -90,14 +83,12 @@ body{
     background: #E7CDCD;
 }
 
-
 .earth{
     border-radius: 50%;
     width: 1.9rem;
     height: 1.9rem;
     background: #428ED5;
 }
-
 
 .mars{
     border-radius: 50%;
@@ -106,14 +97,12 @@ body{
     background: #EF5F5F;
 }
 
-
 .jupiter{
     border-radius: 50%;
     width: 12rem;
     height: 12rem;
     background: #E29468;
 }
-
 
 .saturn{
     display:flex;
@@ -124,6 +113,7 @@ body{
     height: 10rem;
     background: #C7AA72;
 }
+
 .saturnRing{
     position: absolute;
     width: 13.6rem;
@@ -133,7 +123,6 @@ body{
     transform: rotate(-30deg);
 }
 
-
 .uranus{
     position: relative;
     border-radius: 50%;
@@ -141,7 +130,6 @@ body{
     height: 5rem;
     background: #C9D4F1;
 }
-
 
 .neptunus{
     border-radius: 50%;
@@ -179,14 +167,11 @@ body{
     position: absolute;
     background: rgba(255, 255, 255, 0.01);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    /* backdrop-filter: blur(5px); */
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     overflow-x: scroll;
     overflow-x: auto;
     padding: 1rem;
-    /* display:flex;
-    flex-wrap: wrap; */
   }
 
   .modal-content::-webkit-scrollbar{

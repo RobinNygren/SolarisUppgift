@@ -1,9 +1,10 @@
 const BASE_URL = 'https://majazocom.github.io/Data/solaris.json';
 let data; // Deklarera en global variabel för att lagra datan
-const planetDivs = document.querySelectorAll('.planets div');
+const planetDivs = document.querySelectorAll('.planets div');  //Hitta och lagra alla <div>-element inuti element med klassen "planets"
 const planetModal = document.getElementById('planetModal');
 const starContainer = document.querySelector(".star-container");
 
+/********* en funktion för att hämta data ***************/
 const fetchData = async () => {
   try {
     const response = await fetch(BASE_URL);
@@ -15,6 +16,7 @@ const fetchData = async () => {
     data = await response.json(); // Tilldela datan till den globala variabeln
     console.log(data);
 
+    /******* loopa data-arrayen vi hämtat för att lägga till eventlistener på varje planetDiv ***********/
     data.forEach((item, index) => {
     // Lägg till en eventlyssnare på varje planet-div
       planetDivs[index].addEventListener('click', () => showPlanetInfo(item));
@@ -29,6 +31,8 @@ fetchData();
 // Funktion för att öppna modalen och fylla den med planetinformation
 function openModal(planet) {
   const planetModal = document.getElementById('planetModal');
+
+   // lägger in planetinformation i olika HTML-element i modalen
   document.getElementById('planetName').textContent = `${planet.name}`;
   document.getElementById('planetLatinName').textContent = `${planet.latinName}`;
   document.getElementById('planetDescription').textContent = `${planet.desc}`;
@@ -44,17 +48,17 @@ function openModal(planet) {
 }
 
 
-// Funktion för att stänga modalen när användaren klickar på "X"
+/***************** Funktion för att stänga modalen när användaren klickar på "X" ******************/
 function closeModal() {
   planetModal.style.display = 'none';
 }
 
-// Eventlyssnare som kallas när användaren klickar på en planet för att visa information
+/***************** Eventlyssnare som kallas när användaren klickar på en planet för att visa information ******************/
 function showPlanetInfo(planet) {
   openModal(planet);
 }
 
-// Skapa stjärnor funktionen
+/***************** Skapa stjärnor funktionen ******************/
 function createStars() {
     for (let i = 0; i < 58; i++) {
         const star = document.createElement("div");
