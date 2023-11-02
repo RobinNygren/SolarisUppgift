@@ -59,12 +59,14 @@ function showPlanetInfo(planet) {
 
 /***************** Skapa stjärnor funktionen ******************/
 function createStars() {
+  // loop som skapar 58 stjärnor
     for (let i = 0; i < 58; i++) {
         const star = document.createElement("div");
         star.className = "star";
+        // placerar stjärnona slumpat med left och top position i procent av containerns storlek
         star.style.left = `${Math.random() * 100}%`;
         star.style.top = `${Math.random() * 100}%`;
-        starContainer.appendChild(star);
+        starContainer.appendChild(star); // lägger till stjärn elementen i containern
     }
 }
 
